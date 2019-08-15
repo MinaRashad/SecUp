@@ -1,0 +1,45 @@
+body{
+	background-color: white;
+	font-family: monospace;
+	color:rgb(200,100,100);
+}
+h1{
+	font-size: 100px;
+}
+.pointer{
+	animation: flash 1s infinite;
+}
+.pointer::after{
+	content: ">";
+}
+.box{
+	border: dashed red 5px;
+}
+
+/*table{
+	font-size: 40px;
+}*/
+@keyframes flash{
+	0%{
+		color: rgba(200,100,100,0.0);
+	}
+	50%{
+		color: rgba(200,100,100,1);
+	}
+	100%{
+		color: rgba(200,100,100,0);
+	}
+}
+
+::selection{
+	color: white;
+	background-color: rgb(200,100,100)	;
+	/* background-color: linear-gradient(red ,yellow); */
+	
+}
+a{
+	color: unset;
+	text-decoration: unset;
+	font-family: unset;
+	font-weight: bolder;
+}

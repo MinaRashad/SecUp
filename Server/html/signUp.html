@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+	<link rel="stylesheet" type="text/css" href="../css/hack.css">
+	<link rel="stylesheet" type="text/css" href="../css/login_style.css">
+</head>
+<body>
+	<center>
+	<h1><span class="msg">SecUP &gt;&gt;</span><span class='pointer'></span></h1>
+	<label style="font-size: 15px;">have an account? log in <a href="index.html">Here </a></label>
+	</center>
+<dev id='box'>
+	<form id="form" action="/signup" method="POST">
+		<table>
+		<!--------------------------------------------------->
+		
+		<tr>
+		<td>
+			<label>Name:</label>
+		</td>
+		<td>
+			<input type="text" id="name" name="name">
+		</td>		
+		</tr>
+		<!--------------------------------------------------->
+
+		<tr>
+		<td>
+			<label>Password:</label>
+		</td>	
+		<td>
+			<input type="password" id="password" name="pass" minlength="6" maxlength="30">
+		</td>
+		</tr>
+		<!--------------------------------------------------->
+		<tr>
+		<td>
+			<label>Confirm</label>
+		</td>	
+		</tr>
+
+<!--------------------------------------------------->
+		<tr>
+		<td>
+			<label>Password:</label>
+		</td>	
+		<td>
+			<input type="password" id="Cpassword" name="Cpass">
+		</td>
+		</tr>
+		<!--------------------------------------------------->
+		
+		<tr>
+		</tr>
+		</table>
+		<div id="btnContainer">	
+			<input type="submit" value="Sign Up">	
+		</div>
+	</form>
+</dev>
+	<script type="text/javascript" src="../js/hack_style.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('submit',(e)=>{
+			let name = document.getElementById('name')
+			let pass = document.getElementById('password')
+			let cpass = document.getElementById('Cpassword')
+			if(pass.value != cpass.value){
+				e.preventDefault();
+				alert('The two Passwords are not the same!!')
+			}else if (pass.value == '' || name.value == '') {
+				e.preventDefault();
+				alert('The Password and the name Can not be Empty!!')
+			}else if(name.value.indexOf(':') != -1){
+				e.preventDefault();
+				alert('name cannot contain special charachters')
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+#box{
+	position: fixed !important;
+	position: absolute;
+	width: 470px;
+	height: 150px;
+	display: flex;
+	right: 50%;
+	top: 50%;
+	left: 50%;
+	right: 50%;
+}
+
+#form{
+	font-size: 50px !important ;
+	position: relative;
+	right: 50%;
+}
+#btnContainer{
+	text-align: center;
+}
+#form #btnContainer input[type='submit']{
+	display: inline-block;
+}
+/*input[type='text'], input[type='password']{
+	font-size: 1000pxs !important;
+}
+*/
