@@ -611,7 +611,7 @@ function SHA1 (msg) {
         let charMap = ''
         if (testSmall) {charMap += 'abcdefghijklmnopqrstuvwxyz'}
         if (testCapital) {charMap+='ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
-        if (testSpecialCharacters) {charMap+='`~!@#$%^&*()_+-={}[]:";\',./<>?'}
+        if (testSpecialCharacters) {charMap+='`~!@#$%^&*()_+-={}[]:";\'./<>?'}
         if (testNum) {charMap+='0123456789'}          
             var result = ''
             var combos = getCombination(wordLen,'',charMap).join(',').split(',')
